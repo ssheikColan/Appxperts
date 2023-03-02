@@ -1,0 +1,141 @@
+<resources>
+    <string name="app_name">Appxperts</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="nav_header_title">Jay_b</string>
+    <string name="menu_sales">Sales Order</string>
+    <string name="menu_dash">Dashboard</string>
+    <string name="menu_catalog">Catalogue</string>
+    <string name="menu_visited">Visited</string>
+    <string name="menu_setting">Settings</string>
+    <string name="menu_master">Master</string>
+    <string name="menu_product">Product Stock</string>
+    <string name="menu_settlement">Settlement</string>
+    <string name="menu_exchange">Exchange</string>
+    <string name="menu_customer">Customer</string>
+    <string name="username">User Name</string>
+    <string name="terms">Terms</string>
+    <string name="bluetooth_devices">Bluetooth Devices</string>
+    <string name="connect">Connect</string>
+    <string name="print">Print</string>
+    <string name="external_dir">GetSignature</string>
+    <string name="gra_summ">GRA Summary</string>
+    <string name="weight">Total Weight</string>
+    <string name="itemDisc">Item Disc</string>
+    <string name="itemperc">Item Perc</string>
+    <string name="passwrd">Password</string>
+    <string name="deli_address">Select Delivery Address</string>
+    <string name="supp_name">Supplier Name</string>
+    <string name="supplier">Supplier</string>
+    <string name="compny_name">Company Name</string>
+    <string name="branch">Company Branch</string>
+    <string name="stock">Stock status</string>
+    <string name="remember_me">Remember Me</string>
+    <string name="enter_username">Enter Username</string>
+    <string name="enter_passwrd">Enter Password</string>
+    <string name="salesHeader">Sales Order</string>
+    <string name="invoice">Invoice</string>
+    <string name="catalog">Catalogue Header</string>
+    <string name="cata_name">Catalogue product</string>
+    <string name="visited">Visited</string>
+    <string name="salesCustomer">Sales Customer</string>
+    <string name="exchangeSummary">Exchange Summary</string>
+    <string name="salesAdd">Sales Add Product</string>
+    <string name="salesSummary">Sales Summary</string>
+    <string name="exchangeHeader">Exchange Header</string>
+    <string name="customer_list">Customer List</string>
+    <string name="exchangeCustomer">Exchange Customer</string>
+    <string name="exchangeAdd">Exchange Add Product</string>
+    <string name="cust_name">Customer Name</string>
+    <string name="prod_name">Product Name</string>
+    <string name="currency">Currency Code</string>
+    <string name="currncy_name">Currency Name</string>
+    <string name="remarks">Remarks</string>
+    <string name="delivery_dte">Delivery Date</string>
+    <string name="address">Customer Address</string>
+    <string name="valid_email">Enter Valid EmailId</string>
+    <string name="customer_code">Customer Code</string>
+    <string name="customer">Customer</string>
+    <string name="product">Product</string>
+    <string name="summary">Summary</string>
+    <string name="carton">Carton</string>
+    <string name="carton_price">Carton Price</string>
+    <string name="loose">Loose</string>
+    <string name="price">Price</string>
+    <string name="qty">Qty</string>
+    <string name="pcss">Pcs</string>
+    <string name="foc">Foc</string>
+    <string name="show_cust">Show Customer Details</string>
+
+    <string-array name="sales_status">
+        <item>Open</item>
+        <item>Partially Converted</item>
+        <item>Closed</item>
+        <item>All</item>
+    </string-array>
+    <string name="title_activity_sales_add_product">SalesAddProduct</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="title_activity_customer_dialog">CustomerDialogActivity</string>
+    <string name="visi_dialog">Visited Dialog</string>
+
+    <string name="google_maps_key">AIzaSyDPeYwGLjX-HkJa_DAJXRx5LDdJg9Y3PmU</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+    <string-array name="customerarea">
+
+        <item>Area 1</item>
+        <item>Area 2</item>
+        <item>Area 3</item>
+    </string-array>
+
+    <string-array name="customer">
+
+        <item>Select Customer</item>
+        <item>Area 2</item>
+        <item>Area 3</item>
+    </string-array>
+
+    <string-array name="customervehicle">
+
+        <item>AUDI</item>
+        <item>VOLW</item>
+        <item>FORD</item>
+        <item>TATA</item>
+        <item>HYUNDAI</item>
+    </string-array>
+    <string-array name="salesman">
+        <item>--Select Sales Man--</item>
+        <item>Admin User</item>
+        <item>admin1</item>
+        <item>sara</item>
+
+    </string-array>
+    <string-array name="salesman1">
+
+        <item>Admin User</item>
+        <item>admin1</item>
+        <item>sara</item>
+
+    </string-array>
+    <string name="noava">Not Available</string>
+    <string name="delivery_order">Delivery Order</string>
+    <string name="delivery_summary">Delivery Summary</string>
+    <string name="sales_return">Sales Return</string>
+    <string name="receipt_no">Receipt No</string>
+    <string name="paymode">Paymode</string>
+    <string name="date">Date</string>
+    <string name="receipts">Receipts</string>
+    <string name="bank">Bank</string>
+    <string name="cheque_no">Cheque No</string>
+    <string name="cheque_date">Cheque Date</string>
+    <string name="done">Done</string>
+    <string name="cancel">Cancel</string>
+</resources>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <!-- <item name="colorPrimary">@color/colorPrimary</item>
+         <item name="colorPrimaryDark">@color/colorPrimary</item>
+
+     -->
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:forceDarkAllowed" tools:targetApi="q">false</item>
+
+    </style>
+
+    <style name="spinner_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/margin_size</item>
+        <item name="android:background">@drawable/gradient_spinner</item>
+        <item name="android:popupBackground">#F9F9F9</item>
+        <item name="android:textSize">@dimen/text_size_14</item>
+        <item name="fontFamily">@font/quicksand_semibold</item>
+    </style>
+
+    <style name="tab_text" parent="@android:style/TextAppearance.Widget.TabWidget">
+        <item name="android:fontFamily">@font/quicksand_semibold</item>
+    </style>
+
+    <style name="LightTheme" parent="AppTheme">
+        <item name="textColor">#000000</item>
+    </style>
+
+    <style name="DarkTheme" parent="AppTheme">
+        <item name="textColor">#D50909</item>
+    </style>
+
+    <string-array name="stock_status">
+        <item>In</item>
+        <item>Out</item>
+    </string-array>
+
+    <style name="CalendarDatePickerDialog" parent="Theme.AppCompat.Light.Dialog">
+        <item name="colorAccent">@color/colorPrimary</item>
+        <item name="android:fontFamily">@font/quicksand_semibold</item>
+        <item name="android:windowBackground">@color/white</item>
+        <item name="android:textColorPrimary">@color/colorPrimary</item>
+    </style>
+
+
+    <style name="MyTextInputLayout" parent="Widget.Design.TextInputLayout">
+        <item name="background">@drawable/bg_new_edit_bg</item>
+        <!-- ... other customizations ... -->
+    </style>
+
+    <style name="Widget.MaterialComponents.TextInputLayout.OutlinedBox.MyStyle" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="boxStrokeColor">#e2e2e2</item>
+        <item name="hintTextColor">@color/black_tranparency_50</item>
+        <item name="colorControlActivated">@color/colorPrimary</item>
+        <item name="colorControlNormal">@color/textLite</item>
+        <item name="colorControlHighlight">@color/textLite</item>
+        <item name="background">@drawable/bg_new_edit_bg</item>
+
+    </style>
+
+    <style name="TextInputLayoutAppearance" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="colorControlNormal">@color/white</item>
+        <item name="colorControlActivated">@color/white</item>
+        <item name="background">@drawable/bg_new_edit_bg</item>
+        <item name="colorControlHighlight">@color/white</item>
+    </style>
+
+    <style name="Rounded" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+<!--
+        <item name="android:layout_marginRight">@dimen/mp_size_12</item>
+        <item name="android:layout_marginLeft">@dimen/mp_size_12</item>
+        <item name="android:layout_marginTop">@dimen/mp_size_6</item>
+        <item name="android:layout_marginBottom">@dimen/mp_size_6</item>-->
+        <item name="android:layout_margin">@dimen/mp_size_10</item>
+        <item name="cornerSize">16dp</item>
+        <item name="background">@drawable/bg_new_edit_bg</item>
+        <item name="boxCornerRadiusTopStart">10dp</item>
+        <item name="boxCornerRadiusTopEnd">10dp</item>
+        <item name="boxCornerRadiusBottomStart">10dp</item>
+        <item name="boxCornerRadiusBottomEnd">10dp</item>
+        <item name="boxStrokeWidth">0.6dp</item>
+        <item name="boxStrokeWidthFocused">0.6dp</item>
+        <item name="boxStrokeColor">#e2e2e2</item>
+        <item name="android:textColorHint">@color/textLite1</item>
+        <item name="textColor">@color/textLite</item>
+    </style>
+
+    <style name="alphabetTextView">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">2dp</item>
+        <item name="android:background">@color/colorPrimary</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:popupBackground">#F9F9F9</item>
+        <item name="android:textSize">@dimen/text_size_18</item>
+        <item name="fontFamily">@font/quicksand_semibold</item>
+        <item name="android:onClick">"quickScroll"</item>
+
+    </style>
+</resources>

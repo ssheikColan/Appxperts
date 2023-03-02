@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <color name="purple_200">#0547E4</color>
+    <color name="purple_500">#0547E4</color>
+    <color name="purple_700">#0547E4</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <!-- <color name="black">#FF000000</color>-->
+    <color name="black">#323232</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="name_label">#FFFFFFFF</color>
+    <color name="title">#0547E4</color>
+    <color name="editable">#f4f3f9</color>
+    <color name="txt_color">#0547E4</color>
+    <color name="color_total">#9DB6FF</color>
+
+    <color name="colorlayouttableheader">#eef8f9</color>
+    <color name="colorPrimary">#0547E4</color>
+    <color name="colorPrimaryDark">#0547E4</color>
+    <color name="dashboard_color">#0547E4</color>
+
+    <color name="black_f9">#F9F9F9</color>
+    <color name="primary_black">#353535</color>
+    <color name="primary_text_gray">#e5e5e5</color>
+    <color name="primary_text_black">#393939</color>
+    <color name="primary_text_color">#ea6a91</color>
+    <color name="seperator_text_cline">#eaeaea</color>
+    <color name="new_text_color">#202021</color>
+    <color name="new_text_color_lite">#e4f4f6</color>
+    <color name="new_text_color_lite1">#6b6a6a</color>
+
+    <color name="login_pink">#ed295f</color>
+    <color name="round_carner">#C6C4C6</color>
+
+    <color name="fb">#3b5998</color>
+    <color name="google">#55acee</color>
+    <color name="ctegory_list">#f8f9fe</color>
+    <color name="violet">#7f79f8</color>
+    <color name="greenish_ble">#57edc2</color>
+    <color name="green">#10b02d</color>
+    <color name="card_icon">#ffdbac</color>
+    <color name="checkbox_text_color">#4B4B4C</color>
+    <color name="textLite">#6F6F71</color>
+    <color name="textLitecolor">#9d9d9e</color>
+    <color name="primarytrans">#202133a1</color>
+    <color name="textLite1">#8D8C9D</color>
+    <color name="colorPrimaryTrans">#202133a1</color>
+    <color name="black_tranparency_50">#b2b2b2</color>
+    <color name="black_tranparency_30">#2D000000</color>
+    <color name="black_tranparency_10">#1D000000</color>
+    <!--<color name="primarylite">#F3F7FB</color>-->
+    <color name="primarylite">#F5F7FB</color>
+    <color name="gradient_lite">#02AEF1</color>
+    <color name="gradient_dark">#005999</color>
+    <color name="gradient_toolite">#00ADEF</color>
+    <color name="colorViolet">#1942B5</color>
+</resources>

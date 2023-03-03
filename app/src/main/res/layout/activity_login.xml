@@ -3,180 +3,113 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@drawable/i_bg"
-    android:fillViewport="true"
-    android:scrollbars="none"
-    tools:context=".LoginActivity">
+    tools:ignore="MissingConstraints"
+    tools:context=".screens.LoginActivity"
+    android:layout_height="match_parent">
 
-    <RelativeLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/topConstrain"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-        <ImageView
-            android:id="@+id/ivHeader"
-            android:layout_width="200dp"
-            android:layout_height="50dp"
-            android:layout_centerHorizontal="true"
-            android:src="@drawable/i_dotted"
-            app:tint="@color/white" />
 
-        <LinearLayout
-            android:id="@+id/linear"
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout2"
             android:layout_width="match_parent"
             android:layout_height="150dp"
-            android:orientation="vertical">
+            android:background="@drawable/i_bg"
+            tools:ignore="MissingConstraints">
+
+            <ImageView
+                android:id="@+id/ivHeader"
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/i_dotted"
+                app:layout_constraintBottom_toTopOf="@+id/ivLogo"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.45"
+                app:layout_constraintStart_toStartOf="parent"
+                app:tint="@color/white" />
 
             <ImageView
                 android:id="@+id/ivLogo"
                 android:layout_width="130dp"
                 android:layout_height="100dp"
                 android:layout_gravity="center"
-                android:layout_marginTop="50dp"
-                android:src="@drawable/i_logo" />
+                android:src="@drawable/i_logo"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
 
-        </LinearLayout>
-
-
-        <LinearLayout
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_below="@id/linear"
+
             android:background="@color/white"
-            android:orientation="vertical"
-            android:padding="@dimen/normal_size"
-            android:scrollbars="none"
-            android:theme="@style/Theme.Appxperts.NoActionBar">
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout2">
+
             <TextView
+                android:id="@+id/tvText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:fontFamily="@font/quicksand_semibold"
                 android:gravity="center"
-                android:layout_below="@+id/linear"
-                android:id="@+id/tvText"
                 android:text="ERP PRO"
+                android:textColor="@color/black"
+                android:textSize="26sp"
                 android:textStyle="bold"
-                android:textColor="@color/black"
-                android:textSize="26sp" />
-
-            <TextView
-                android:id="@+id/tvLogintag"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/mp_size_20"
-                android:layout_marginTop="@dimen/mp_size_10"
-                android:fontFamily="@font/quicksand_regular"
-                android:text="Login"
-                android:textColor="@color/black"
-                android:textSize="@dimen/text_size_24"
-                android:visibility="gone" />
-
-            <View
-                android:id="@+id/view"
-                android:layout_width="@dimen/mp_size_80"
-                android:layout_height="3dp"
-                android:layout_below="@id/tvLogintag"
-                android:layout_marginLeft="@dimen/mp_size_12"
-                android:layout_marginTop="@dimen/mp_size_8"
-                android:background="@drawable/commonbg"
-                android:backgroundTint="@color/login_pink"
-                android:visibility="gone"></View>
-
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="30dp"
-                android:layout_marginLeft="@dimen/text_pad"
-                android:layout_marginTop="@dimen/mp_size_30"
-                android:text="@string/username"
-                android:textColor="@color/black"
-                android:textSize="@dimen/text_size_16"
-                android:visibility="gone" />
+                tools:ignore="MissingConstraints" />
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/til_username"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/mp_size_4"
-                android:layout_marginTop="@dimen/mp_size_4"
-                android:layout_marginRight="@dimen/mp_size_4"
+                android:layout_margin="@dimen/text_size_10"
                 android:hint="Username"
-
-                app:hintTextColor="@color/textLite">
+                app:hintTextColor="@color/textLite"
+                app:layout_constraintTop_toBottomOf="@id/tvText"
+                tools:ignore="MissingConstraints">
 
                 <androidx.appcompat.widget.AppCompatEditText
                     android:id="@+id/username"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="@dimen/text_pad"
                     android:fontFamily="@font/quicksand_semibold"
                     android:inputType="textEmailAddress"
                     android:textSize="@dimen/text_size_16" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
-            <RelativeLayout
-                android:id="@+id/rlPassword"
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_paswrd"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/text_size_10"
+                android:hint="@string/passwrd"
+                app:hintTextColor="@color/textLite"
+                app:passwordToggleEnabled="true"
+                app:layout_constraintTop_toBottomOf="@+id/til_username"
+                tools:ignore="MissingConstraints">
 
-                android:layout_height="wrap_content">
-
-                <TextView
-                    android:id="@+id/tvPwd"
-                    android:layout_width="match_parent"
-                    android:layout_height="30dp"
-                    android:layout_marginLeft="@dimen/text_pad"
-                    android:layout_marginTop="@dimen/normal_size"
-                    android:text="@string/passwrd"
-                    android:textColor="@color/black"
-                    android:textSize="@dimen/text_size_16"
-                    android:visibility="gone" />
-
-                <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/til_paswrd"
-                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/passwrd"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/tvPwd"
-                    android:layout_marginLeft="@dimen/mp_size_4"
-                    android:layout_marginTop="@dimen/mp_size_20"
-                    android:layout_marginRight="@dimen/mp_size_4"
-                    android:hint="@string/passwrd"
-                    app:hintTextColor="@color/textLite"
-                    app:passwordToggleEnabled="true">
+                    android:fontFamily="@font/quicksand_semibold"
+                    android:inputType="textPassword"
+                    android:textSize="@dimen/text_size_16" />
 
-                    <androidx.appcompat.widget.AppCompatEditText
-                        android:id="@+id/passwrd"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="@dimen/text_pad"
-                        android:fontFamily="@font/quicksand_semibold"
-                        android:inputType="textPassword"
-
-                        android:textSize="@dimen/text_size_16" />
-
-
-                </com.google.android.material.textfield.TextInputLayout>
-
-                <ImageView
-                    android:id="@+id/ivToggleVisible"
-                    android:layout_width="@dimen/mp_size_24"
-                    android:layout_height="@dimen/mp_size_24"
-                    android:layout_below="@id/tvPwd"
-                    android:layout_alignParentRight="true"
-                    android:layout_marginLeft="@dimen/mp_size_8"
-                    android:layout_marginTop="@dimen/mp_size_16"
-                    android:layout_marginRight="@dimen/mp_size_8"
-                    android:layout_marginBottom="@dimen/mp_size_8"
-                    android:src="@drawable/ic_visibleoff"
-                    android:visibility="gone" />
-
-            </RelativeLayout>
-
+            </com.google.android.material.textfield.TextInputLayout>
 
             <TextView
+                android:id="@+id/companyLable1"
+                app:layout_constraintTop_toBottomOf="@+id/til_paswrd"
                 android:layout_width="match_parent"
                 android:layout_height="30dp"
                 android:layout_marginLeft="@dimen/mp_size_6"
@@ -188,15 +121,17 @@
                 android:visibility="visible" />
 
             <Spinner
+                app:layout_constraintTop_toBottomOf="@+id/companyLable1"
                 android:id="@+id/cmpnyName"
-
-                android:layout_marginLeft="@dimen/mp_size_4"
-                android:layout_marginRight="@dimen/mp_size_4"
+                android:entries="@array/customervehicle"
+                android:layout_margin="@dimen/text_size_10"
                 style="@style/spinner_style"
                 android:spinnerMode="dialog"
                 android:visibility="visible" />
 
             <TextView
+                android:id="@+id/companyLable2"
+                app:layout_constraintTop_toBottomOf="@+id/cmpnyName"
                 android:layout_width="match_parent"
                 android:layout_height="30dp"
                 android:layout_marginLeft="@dimen/text_pad"
@@ -207,75 +142,57 @@
                 android:visibility="visible" />
 
             <Spinner
+                app:layout_constraintTop_toBottomOf="@+id/companyLable2"
                 android:id="@+id/branchName"
                 style="@style/spinner_style"
-                android:layout_marginLeft="@dimen/text_pad"
+                android:layout_margin="@dimen/text_size_10"
+                android:entries="@array/customerarea"
                 android:spinnerMode="dialog"
-                android:visibility="visible" />
-
+                android:visibility="visible"
+                tools:ignore="MissingConstraints" />
 
             <androidx.appcompat.widget.AppCompatCheckBox
+                app:layout_constraintTop_toBottomOf="@+id/branchName"
                 android:id="@+id/simpleCheckBox"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/normal_size"
-                android:layout_marginTop="@dimen/text_size"
-                android:layout_marginBottom="@dimen/text_size"
+                android:layout_margin="@dimen/mp_size_20"
                 android:checked="false"
                 android:text="@string/remember_me"
                 android:textSize="@dimen/text_size_18"
-                app:buttonTint="@color/colorPrimary" />
-
+                app:buttonTint="@color/colorPrimary"
+                />
 
             <TextView
+                app:layout_constraintTop_toBottomOf="@+id/simpleCheckBox"
                 android:id="@+id/login"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-
-
                 android:background="@drawable/login_button"
                 android:gravity="center"
-                android:padding="@dimen/mp_size_10"
+                android:layout_margin="@dimen/mp_size_20"
+                android:padding="@dimen/text_size_10"
                 android:text="Sign In"
                 android:textColor="@color/white"
                 android:textSize="@dimen/text_size"
                 android:textStyle="bold" />
 
-        </LinearLayout>
+            <ImageView
+                android:layout_marginTop="@dimen/mp_size_20"
+                android:id="@+id/ivBottom"
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/i_dotted"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/login" />
 
-        <!--<RelativeLayout
-            android:layout_width="match_parent"
-            android:id="@+id/rlBottom"
-            android:background="@color/white"
-            android:layout_height="wrap_content">-->
-        <TextView
-            android:id="@+id/forgotPassword"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_above="@+id/ivBottom"
-            android:layout_gravity="center"
-            android:layout_marginLeft="@dimen/mp_size_10"
-            android:layout_marginBottom="@dimen/mp_size_40"
-            android:gravity="center"
-            android:padding="@dimen/mp_size_10"
-            android:visibility="gone"
-            android:text="FORGOT PASSWORD ?"
-            android:textColor="@color/colorPrimary"
-            android:textSize="@dimen/text_size"
-            android:textStyle="bold" />
-        <ImageView
-            android:id="@+id/ivBottom"
-            android:layout_width="200dp"
-            android:layout_height="50dp"
-            android:layout_centerHorizontal="true"
-            android:layout_alignParentBottom="true"
-            android:src="@drawable/i_dotted"
-            />
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
-        <!--   </RelativeLayout>-->
 
-    </RelativeLayout>
-
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </ScrollView>

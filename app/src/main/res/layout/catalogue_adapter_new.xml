@@ -192,25 +192,11 @@
                             android:inputType="number"
                             android:textColor="@color/white"
                             android:textSize="@dimen/text_size_12" />
-                       <!-- <TextView
-                            android:id="@+id/tvUnitQty"
-                            android:layout_width="50dp"
-                            android:layout_height="22dp"
-                            android:layout_below="@id/price"
-                            android:layout_marginLeft="@dimen/mp_size_2"
-                            android:layout_marginRight="@dimen/mp_size_2"
-                            android:layout_weight="0.4"
-                            android:fontFamily="@font/quicksand_semibold"
-                            android:gravity="center"
-                            android:text="0"
-                            android:textColor="@color/white"
-                            android:textSize="@dimen/text_size_12" />-->
 
                         <TextView
                             android:id="@+id/tvUnitAdd"
                             android:layout_width="30dp"
                             android:layout_height="wrap_content"
-
                             android:layout_marginLeft="@dimen/mp_size_2"
                             android:layout_marginRight="@dimen/mp_size_2"
                             android:layout_weight="1.2"

@@ -66,27 +66,6 @@
     <string name="foc">Foc</string>
     <string name="show_cust">Show Customer Details</string>
 
-    <string-array name="sales_status">
-        <item>Open</item>
-        <item>Partially Converted</item>
-        <item>Closed</item>
-        <item>All</item>
-    </string-array>
-    <string name="title_activity_sales_add_product">SalesAddProduct</string>
-    <!-- Strings used for fragments for navigation -->
-    <string name="first_fragment_label">First Fragment</string>
-    <string name="second_fragment_label">Second Fragment</string>
-    <string name="next">Next</string>
-    <string name="previous">Previous</string>
-
-    <string name="hello_first_fragment">Hello first fragment</string>
-    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
-    <string name="title_activity_customer_dialog">CustomerDialogActivity</string>
-    <string name="visi_dialog">Visited Dialog</string>
-
-    <string name="google_maps_key">AIzaSyDPeYwGLjX-HkJa_DAJXRx5LDdJg9Y3PmU</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 
     <string-array name="customerarea">
@@ -111,6 +90,7 @@
         <item>TATA</item>
         <item>HYUNDAI</item>
     </string-array>
+
     <string-array name="salesman">
         <item>--Select Sales Man--</item>
         <item>Admin User</item>

@@ -7,7 +7,7 @@
     android:background="@color/primarylite"
     android:orientation="vertical"
     android:id="@+id/my_drawer_layout"
-    tools:context=".CatalogueActivity">
+    tools:context=".screens.CatalogueActivity">
 
     <RelativeLayout
         android:layout_width="match_parent"

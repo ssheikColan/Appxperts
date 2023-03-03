@@ -1,171 +1,198 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".SplashActivity">
+    tools:ignore="MissingConstraints"
+    tools:context=".screens.SplashActivity"
+    android:layout_height="match_parent">
 
-    <RelativeLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_above="@+id/rlBottomLayout">
+        android:layout_height="match_parent">
 
         <ImageView
             android:id="@+id/ivLogo"
             android:layout_width="250dp"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="@dimen/mp_size_30"
-            android:src="@drawable/ic_name"></ImageView>
-
+            android:src="@drawable/ic_name"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"></ImageView>
 
         <ImageView
+            android:id="@+id/banner"
             android:layout_width="wrap_content"
             android:layout_height="450dp"
             android:layout_below="@+id/ivLogo"
             android:layout_centerHorizontal="true"
+            android:src="@drawable/ic_appxperts"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ivLogo"></ImageView>
 
-            android:src="@drawable/ic_appxperts"></ImageView>
-
-    </RelativeLayout>
-
-
-    <RelativeLayout
-        android:id="@+id/rlBottomLayout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true">
-
-        <LinearLayout
-            android:id="@+id/llLogoLayout"
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:orientation="horizontal"
-            android:layout_marginLeft="@dimen/mp_size_20"
-            android:layout_marginRight="@dimen/mp_size_20"
-            android:weightSum="4">
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/banner">
 
-            <ImageView
-                android:layout_width="0dp"
-                android:layout_height="@dimen/mp_size_40"
-                android:layout_centerHorizontal="true"
-                android:layout_margin="@dimen/mp_size_20"
-                android:layout_weight="1"
-                android:src="@drawable/ic_sales"></ImageView>
-
-            <ImageView
-                android:layout_width="0dp"
-                android:layout_height="@dimen/mp_size_40"
-                android:layout_centerHorizontal="true"
-                android:layout_margin="@dimen/mp_size_20"
-                android:layout_weight="1"
-                android:src="@drawable/ic_purchase"></ImageView>
-
-            <ImageView
-                android:layout_width="0dp"
-                android:layout_height="@dimen/mp_size_40"
-                android:layout_centerHorizontal="true"
-                android:layout_margin="@dimen/mp_size_20"
-                android:layout_weight="1"
-                android:src="@drawable/ic_inventory"></ImageView>
-
-            <ImageView
-                android:layout_width="0dp"
-                android:layout_height="@dimen/mp_size_40"
-                android:layout_centerHorizontal="true"
-                android:layout_margin="@dimen/mp_size_20"
-                android:layout_weight="1"
-                android:src="@drawable/ic_accounts"></ImageView>
-
-        </LinearLayout>
-
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/llLogoLayout"
-            android:layout_marginBottom="@dimen/mp_size_30"
-            android:layout_marginLeft="@dimen/mp_size_20"
-            android:layout_marginRight="@dimen/mp_size_20"
-            android:background="#2E61D4"
-            android:orientation="horizontal"
-            android:padding="@dimen/mp_size_4"
-            android:weightSum="4">
-
-            <TextView
-                android:layout_width="0dp"
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/imgLayout"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="0.8"
-                android:fontFamily="@font/quicksand_semibold"
-                android:gravity="center"
-                android:text="SALES"
-                android:textColor="@color/white"
-                android:textSize="@dimen/text_size_12" />
-            <TextView
-                android:layout_width="0dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <ImageView
+                    android:id="@+id/img1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/mp_size_40"
+                    android:layout_margin="@dimen/mp_size_30"
+                    android:src="@drawable/ic_sales"></ImageView>
+
+                <ImageView
+                    android:id="@+id/img2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/mp_size_40"
+                    android:layout_centerHorizontal="true"
+                    android:layout_margin="@dimen/mp_size_30"
+                    android:src="@drawable/ic_purchase"
+                    app:layout_constraintLeft_toRightOf="@+id/img1"></ImageView>
+
+                <ImageView
+                    android:id="@+id/img3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/mp_size_40"
+                    android:layout_centerHorizontal="true"
+                    android:layout_margin="@dimen/mp_size_30"
+                    android:src="@drawable/ic_inventory"
+                    app:layout_constraintLeft_toRightOf="@+id/img2"></ImageView>
+
+                <ImageView
+                    android:id="@+id/img4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/mp_size_40"
+                    android:layout_centerHorizontal="true"
+                    android:layout_margin="@dimen/mp_size_30"
+                    android:src="@drawable/ic_accounts"
+                    app:layout_constraintLeft_toRightOf="@+id/img3"></ImageView>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="0.2"
-                android:fontFamily="@font/quicksand_semibold"
-                android:gravity="center"
-                android:text="||"
-                android:textColor="@color/white"
-                android:textSize="@dimen/text_size_14" />
+                android:layout_margin="@dimen/mp_size_8"
+                android:background="#2E61D4"
+                android:padding="@dimen/mp_size_6"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imgLayout">
 
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="0.8"
-                android:fontFamily="@font/quicksand_semibold"
-                android:gravity="center"
-                android:text="PURCHASE"
-                android:textColor="@color/white"
-                android:textSize="@dimen/text_size_12" />
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:layout_editor_absoluteY="6dp">
 
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="0.2"
-                android:fontFamily="@font/quicksand_semibold"
-                android:gravity="center"
-                android:text="||"
-                android:textColor="@color/white"
-                android:textSize="@dimen/text_size_14" />
+                    <TextView
+                        android:id="@+id/txt1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/text_size_10"
+                        android:fontFamily="@font/quicksand_semibold"
+                        android:gravity="center"
+                        android:text="SALES"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_size_12" />
 
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="0.8"
-                android:fontFamily="@font/quicksand_semibold"
-                android:gravity="center"
-                android:text="INVENTORY"
-                android:textColor="@color/white"
-                android:textSize="@dimen/text_size_12" />
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="0.2"
-                android:fontFamily="@font/quicksand_semibold"
-                android:gravity="center"
-                android:text="||"
-                android:textColor="@color/white"
-                android:textSize="@dimen/text_size_12" />
+                    <TextView
+                        android:id="@+id/txt2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/text_size_10"
+                        android:fontFamily="@font/quicksand_semibold"
+                        android:gravity="center"
+                        android:text="||"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_size_14"
+                        app:layout_constraintLeft_toRightOf="@+id/txt1" />
 
+                    <TextView
+                        android:id="@+id/txt3"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/text_size_10"
 
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:fontFamily="@font/quicksand_semibold"
-                android:gravity="center"
-                android:text="ACCOUNTS"
-                android:textColor="@color/white"
-                android:textSize="@dimen/text_size_12" />
-
-        </LinearLayout>
+                        android:fontFamily="@font/quicksand_semibold"
+                        android:gravity="center"
+                        android:text="PURCHASE"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_size_12"
+                        app:layout_constraintLeft_toRightOf="@+id/txt2" />
 
 
-    </RelativeLayout>
+                    <TextView
+                        android:id="@+id/txt4"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/text_size_10"
 
-</RelativeLayout>
+                        android:fontFamily="@font/quicksand_semibold"
+                        android:gravity="center"
+                        android:text="||"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_size_14"
+                        app:layout_constraintLeft_toRightOf="@+id/txt3" />
+
+                    <TextView
+                        android:id="@+id/txt5"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/text_size_10"
+
+                        android:fontFamily="@font/quicksand_semibold"
+                        android:gravity="center"
+                        android:text="INVENTORY"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_size_12"
+                        app:layout_constraintLeft_toRightOf="@+id/txt4" />
+
+                    <TextView
+                        android:id="@+id/txt6"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/text_size_10"
+
+                        android:fontFamily="@font/quicksand_semibold"
+                        android:gravity="center"
+                        android:text="||"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_size_12"
+                        app:layout_constraintLeft_toRightOf="@+id/txt5" />
+
+                    <TextView
+                        android:id="@+id/txt7"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/text_size_10"
+                        android:fontFamily="@font/quicksand_semibold"
+                        android:gravity="center"
+                        android:text="ACCOUNTS"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_size_12"
+                        app:layout_constraintLeft_toRightOf="@+id/txt6" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

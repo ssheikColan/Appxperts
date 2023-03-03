@@ -1,577 +1,194 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/white"
     android:id="@+id/my_drawer_layout"
-    tools:context=".HomeActivity">
-
-
-    <RelativeLayout
-        android:background="@color/white"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-    <com.google.android.material.appbar.AppBarLayout
-        android:id="@+id/appBarLayout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/colorPrimary"
-        app:elevation="0dp">
-
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginBottom="@dimen/mp_size_6">
-
-                <TextView
-
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
-                    android:layout_marginLeft="@dimen/mp_size_20"
-                    android:layout_marginTop="@dimen/mp_size_4"
-                    android:layout_toRightOf="@+id/img_hambur"
-                    android:fontFamily="@font/quicksand_semibold"
-                    android:text="Dashboard"
-                    android:textColor="@color/black"
-                    android:textSize="@dimen/text_size_20"
-                    android:visibility="gone" />
-
-
-                <TextView
-
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-
-                    android:layout_marginLeft="@dimen/mp_size_30"
-                    android:layout_marginTop="@dimen/mp_size_4"
-                    android:fontFamily="@font/quicksand_semibold"
-                    android:textColor="@color/textLite1"
-
-                    android:textSize="@dimen/text_size_14"
-                    android:visibility="gone" />
-
-
-                <ImageView
-                    android:id="@+id/img_logo"
-                    android:layout_width="100dp"
-                    android:layout_height="60dp"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginTop="@dimen/mp_size_10"
-                    android:src="@drawable/i_logo"
-                    android:visibility="visible" />
-                <ImageView
-                    android:id="@+id/ivPrint"
-                    android:visibility="gone"
-                    android:layout_width="26dp"
-                    android:layout_height="26dp"
-                    android:layout_toLeftOf="@+id/ivSettings"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginRight="@dimen/normal_size"
-                    android:src="@drawable/printing" />
-
-                <ImageView
-                    android:id="@+id/ivSettings"
-                    android:layout_width="26dp"
-                    android:layout_height="26dp"
-                    android:layout_alignParentRight="true"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginRight="@dimen/normal_size"
-                    android:src="@drawable/i_setting" />
-
-            </RelativeLayout>
-        </androidx.appcompat.widget.Toolbar>
-
-    </com.google.android.material.appbar.AppBarLayout>
-
+    tools:context=".screens.HomeActivity"
+    tools:ignore="MissingConstraints">
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@id/appBarLayout"
-        android:background="@color/colorPrimary"
-        android:fillViewport="true"
-        android:visibility="visible">
+        android:layout_height="match_parent">
 
-        <RelativeLayout
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_centerHorizontal="true">
+            android:layout_height="match_parent">
 
-            <RelativeLayout
-                android:id="@+id/rlHeaderLayout"
-                android:layout_width="match_parent"
-                android:layout_height="150dp"
-                android:background="@color/colorPrimary"
-                android:visibility="visible">
-
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="150dp"
-                    android:orientation="horizontal"
-                    android:visibility="gone">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="left"
-                        android:layout_weight="1"
-                        android:orientation="vertical"
-                        android:padding="@dimen/text_size">
-
-                        <TextView
-                            android:id="@+id/tvSalesOrderCount"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:fontFamily="@font/quicksand_semibold"
-                            android:gravity="center"
-                            android:text="100"
-                            android:textColor="@color/white"
-                            android:textSize="@dimen/text_size_20"
-                            android:textStyle="bold" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:layout_marginTop="@dimen/mp_size_4"
-                            android:fontFamily="@font/quicksand_semibold"
-                            android:gravity="center"
-                            android:text="Sales Order"
-                            android:textColor="@color/white"
-                            android:textSize="@dimen/text_size_12" />
-
-                    </LinearLayout>
-
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="left"
-                        android:layout_weight="1"
-                        android:orientation="vertical"
-                        android:padding="@dimen/text_size">
-
-                        <TextView
-                            android:id="@+id/tvVisitedCount"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:fontFamily="@font/quicksand_semibold"
-                            android:gravity="center"
-                            android:text="120"
-                            android:textColor="@color/white"
-                            android:textSize="@dimen/text_size_20" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:layout_marginTop="@dimen/mp_size_4"
-                            android:fontFamily="@font/quicksand_semibold"
-                            android:gravity="center"
-                            android:text="Visited"
-                            android:textColor="@color/white"
-                            android:textSize="@dimen/text_size_12" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="left"
-                        android:layout_weight="1"
-                        android:orientation="vertical"
-                        android:padding="@dimen/text_size"
-                        android:visibility="visible">
-
-                        <TextView
-                            android:id="@+id/tvExchangeCount"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:fontFamily="@font/quicksand_semibold"
-                            android:gravity="center"
-                            android:text="0"
-                            android:textColor="@color/white"
-                            android:textSize="@dimen/text_size_20" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:layout_marginTop="@dimen/mp_size_4"
-                            android:fontFamily="@font/quicksand_semibold"
-                            android:gravity="center"
-                            android:text="Exchange"
-                            android:textColor="@color/white"
-                            android:textSize="@dimen/text_size_12" />
-
-                    </LinearLayout>
-
-
-                </LinearLayout>
-
-
-            </RelativeLayout>
-            <androidx.cardview.widget.CardView
-                android:id="@+id/cart2"
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cons2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/mp_size_16"
-                android:layout_marginTop="50dp"
-                android:layout_marginRight="@dimen/mp_size_16"
-                app:cardBackgroundColor="@color/white"
-                app:cardCornerRadius="@dimen/normal_size"
-                app:cardElevation="@dimen/mp_size_14">
+                android:background="@color/colorPrimary"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
 
-                <RelativeLayout
+                <com.google.android.material.appbar.AppBarLayout
+                    android:id="@+id/appBarLayout"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/white_home_bg"
-                    android:elevation="@dimen/mp_size_14"
-                    android:orientation="horizontal"
-                    android:visibility="visible">
+                   >
 
-                    <RelativeLayout
-                        android:id="@+id/rlDashFirstLayout"
+                    <androidx.appcompat.widget.Toolbar
+                        android:id="@+id/toolbar"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
 
-                        <ImageView
-                            android:id="@+id/ivDashImg"
-                            android:layout_width="wrap_content"
+                        <RelativeLayout
+                            android:layout_marginRight="@dimen/mp_size_40"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="@dimen/mp_size_6">
+
+                            <ImageView
+                                android:id="@+id/img_logo"
+                                android:layout_width="100dp"
+                                android:layout_height="60dp"
+                               android:layout_centerHorizontal="true"
+                                android:src="@drawable/i_logo"
+                                android:visibility="visible" />
+
+                            <ImageView
+                                android:id="@+id/ivSettings"
+                                android:layout_width="26dp"
+                                android:layout_height="26dp"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginTop="20dp"
+
+                                android:src="@drawable/i_setting" />
+
+                        </RelativeLayout>
+                    </androidx.appcompat.widget.Toolbar>
+
+                </com.google.android.material.appbar.AppBarLayout>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cart2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/mp_size_16"
+                    android:layout_marginTop="50dp"
+                    android:layout_marginRight="@dimen/mp_size_16"
+                    android:layout_marginBottom="@dimen/mp_size_20"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardCornerRadius="@dimen/normal_size"
+                    app:cardElevation="@dimen/mp_size_14"
+                    app:layout_constraintTop_toBottomOf="@+id/appBarLayout">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/white_home_bg"
+                        android:elevation="@dimen/mp_size_14"
+                        android:orientation="horizontal"
+                        android:visibility="visible">
+
+                        <RelativeLayout
+                            android:id="@+id/rlDashFirstLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:id="@+id/ivDashImg"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginStart="@dimen/mp_size_10"
+                                android:layout_marginTop="@dimen/mp_size_10"
+                                android:layout_marginEnd="@dimen/mp_size_10"
+                                android:layout_marginBottom="@dimen/mp_size_10"
+                                android:src="@mipmap/ic_salescount" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/mp_size_6"
+                                android:layout_toRightOf="@id/ivDashImg"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/mp_size_10"
+                                    android:layout_marginTop="@dimen/mp_size_10"
+                                    android:layout_marginRight="@dimen/mp_size_10"
+                                    android:layout_marginBottom="@dimen/mp_size_4"
+                                    android:gravity="center"
+                                    android:text="Invoices"
+                                    android:textColor="@color/new_text_color"
+                                    android:textSize="@dimen/text_size" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/normal_size"
+                                    android:fontFamily="@font/quicksand_medium"
+                                    android:gravity="center"
+                                    android:text="Total from July 2022"
+                                    android:textColor="@color/new_text_color_lite1"
+                                    android:textSize="@dimen/text_size_14" />
+
+                            </LinearLayout>
+
+                            <ImageView
+                                android:layout_width="32dp"
+                                android:layout_height="32dp"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginLeft="@dimen/mp_size_10"
+                                android:layout_marginTop="@dimen/mp_size_10"
+                                android:layout_marginRight="@dimen/mp_size_16"
+                                android:layout_marginBottom="@dimen/mp_size_10"
+                                android:src="@drawable/i_invoice" />
+
+                        </RelativeLayout>
+
+
+                        <View
+                            android:id="@+id/view"
+                            android:layout_width="match_parent"
+                            android:layout_height="0.6dp"
+                            android:layout_below="@+id/rlDashFirstLayout"
+                            android:layout_marginStart="@dimen/mp_size_16"
+                            android:layout_marginTop="@dimen/mp_size_16"
+                            android:layout_marginEnd="@dimen/mp_size_16"
+                            android:layout_marginBottom="@dimen/mp_size_16"
+                            android:background="@color/black_tranparency_30"></View>
+
+                        <TextView
+                            android:id="@+id/tvInvoiveLink"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_gravity="center"
+                            android:layout_below="@+id/view"
                             android:layout_marginStart="@dimen/mp_size_10"
                             android:layout_marginTop="@dimen/mp_size_10"
                             android:layout_marginEnd="@dimen/mp_size_10"
                             android:layout_marginBottom="@dimen/mp_size_10"
-                            android:src="@mipmap/ic_salescount" />
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="@dimen/mp_size_6"
-                            android:layout_toRightOf="@id/ivDashImg"
-                            android:orientation="vertical">
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginLeft="@dimen/mp_size_10"
-                                android:layout_marginTop="@dimen/mp_size_10"
-                                android:layout_marginRight="@dimen/mp_size_10"
-                                android:layout_marginBottom="@dimen/mp_size_4"
-                                android:gravity="center"
-                                android:text="Invoices"
-                                android:textColor="@color/new_text_color"
-                                android:textSize="@dimen/text_size" />
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginLeft="@dimen/normal_size"
-                                android:fontFamily="@font/quicksand_medium"
-                                android:gravity="center"
-                                android:text="Total from July 2022"
-                                android:textColor="@color/new_text_color_lite1"
-                                android:textSize="@dimen/text_size_14" />
-
-                        </LinearLayout>
-
-                        <ImageView
-                            android:layout_width="32dp"
-                            android:layout_height="32dp"
-                            android:layout_alignParentRight="true"
-                            android:layout_marginLeft="@dimen/mp_size_10"
-                            android:layout_marginTop="@dimen/mp_size_10"
-                            android:layout_marginRight="@dimen/mp_size_16"
-                            android:layout_marginBottom="@dimen/mp_size_10"
-                            android:src="@drawable/i_invoice" />
+                            android:gravity="center"
+                            android:text="View Invoices >"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/text_size_16" />
 
                     </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
 
-                    <View
-                        android:id="@+id/view"
-                        android:layout_width="match_parent"
-                        android:layout_height="0.6dp"
-                        android:layout_below="@+id/rlDashFirstLayout"
-                        android:layout_margin="@dimen/mp_size_16"
-                        android:background="@color/black_tranparency_30"></View>
-
-                    <TextView
-                        android:id="@+id/tvInvoiveLink"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@+id/view"
-                        android:layout_marginStart="@dimen/mp_size_10"
-                        android:layout_marginTop="@dimen/mp_size_10"
-                        android:layout_marginEnd="@dimen/mp_size_10"
-                        android:layout_marginBottom="@dimen/mp_size_10"
-                        android:gravity="center"
-                        android:text="View Invoices >"
-                        android:textColor="@color/colorPrimary"
-                        android:textSize="@dimen/text_size_16" />
-
-                </RelativeLayout>
-            </androidx.cardview.widget.CardView>
-
-            <TextView
-                android:id="@+id/prim"
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_marginTop="@dimen/mp_size_30"
+                app:layout_constraintTop_toBottomOf="@id/cons2"
+                android:id="@+id/con3"
+                android:layout_marginHorizontal="@dimen/mp_size_40"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/mp_size_20"
-                android:layout_marginTop="@dimen/mp_size_20"
-                android:layout_marginBottom="@dimen/mp_size_20"
-                android:fontFamily="@font/quicksandbold"
-                android:text="Primary Information"
-
-                android:textColor="@color/colorPrimary"
-                android:textSize="@dimen/text_size"
-                android:visibility="gone" />
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_below="@+id/cart2"
-                android:layout_centerHorizontal="true"
-
-                android:background="@color/white"
-                android:gravity="center_horizontal">
-
+                android:layout_height="wrap_content">
 
                 <RelativeLayout
-                    android:id="@+id/salesLayout"
-                    android:layout_width="140dp"
-                    android:layout_height="140dp"
-                    android:layout_below="@id/SalesOrderLayout"
-                    android:layout_marginLeft="@dimen/mp_size_16"
-                    android:layout_marginTop="@dimen/mp_size_30"
-                    android:layout_marginRight="@dimen/mp_size_16"
-                    android:layout_marginBottom="@dimen/mp_size_4"
-                    android:background="@drawable/home_bg_one"
-                    android:clickable="true"
-                    android:focusable="true"
 
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:id="@+id/ivImg1"
-                        android:layout_width="34dp"
-                        android:layout_height="34dp"
-                        android:layout_alignParentRight="true"
-                        android:layout_marginTop="@dimen/mp_size_10"
-                        android:layout_marginRight="@dimen/mp_size_10"
-                        android:src="@drawable/reciept" />
-
-                    <TextView
-                        android:id="@+id/tvReceipt"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@id/ivImg1"
-                        android:layout_margin="@dimen/mp_size_10"
-                        android:fontFamily="@font/quicksandbold"
-                        android:text="Total \nReceipts"
-                        android:textColor="@color/new_text_color"
-                        android:textSize="@dimen/text_size_16"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@id/tvReceipt"
-                        android:layout_marginLeft="@dimen/mp_size_10"
-                        android:layout_marginRight="@dimen/mp_size_10"
-                        android:layout_marginBottom="@dimen/mp_size_10"
-                        android:fontFamily="@font/quicksandbold"
-                        android:text="25"
-                        android:textColor="@color/new_text_color_lite1"
-
-                        android:textSize="@dimen/text_size_16"
-                        android:textStyle="bold" />
-
-
-                </RelativeLayout>
-
-                <RelativeLayout
-                    android:id="@+id/deliveryLayout"
-                    android:layout_width="140dp"
-                    android:layout_height="140dp"
-                    android:layout_below="@id/SalesOrderLayout"
-                    android:layout_marginLeft="@dimen/mp_size_16"
-                    android:layout_marginTop="@dimen/mp_size_30"
-                    android:layout_marginRight="@dimen/mp_size_16"
-                    android:layout_marginBottom="@dimen/mp_size_4"
-                    android:layout_toRightOf="@id/salesLayout"
-                    android:background="@drawable/home_bg_two"
-                    android:clickable="true"
-                    android:focusable="true"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:id="@+id/ivImg2"
-                        android:layout_width="34dp"
-                        android:layout_height="34dp"
-                        android:layout_alignParentRight="true"
-                        android:layout_marginTop="@dimen/mp_size_10"
-                        android:layout_marginRight="@dimen/mp_size_10"
-                        android:src="@drawable/delivery_order" />
-
-                    <TextView
-                        android:id="@+id/tvDelivery"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@id/ivImg2"
-                        android:layout_margin="@dimen/mp_size_10"
-                        android:fontFamily="@font/quicksandbold"
-                        android:text="Delivery \nOrder"
-                        android:textColor="@color/new_text_color"
-                        android:textSize="@dimen/text_size_16"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@id/tvDelivery"
-                        android:layout_marginLeft="@dimen/mp_size_10"
-                        android:layout_marginRight="@dimen/mp_size_10"
-                        android:layout_marginBottom="@dimen/mp_size_10"
-                        android:fontFamily="@font/quicksandbold"
-                        android:text="15"
-                        android:textColor="@color/new_text_color_lite1"
-
-                        android:textSize="@dimen/text_size_16"
-                        android:textStyle="bold" />
-
-
-                </RelativeLayout>
-
-                <RelativeLayout
-                    android:id="@+id/SalesReturnLayout"
-                    android:layout_width="140dp"
-                    android:layout_height="140dp"
-                    android:layout_below="@id/salesLayout"
-                    android:layout_marginLeft="@dimen/mp_size_16"
-                    android:layout_marginTop="@dimen/mp_size_20"
-                    android:layout_marginRight="@dimen/mp_size_16"
-                    android:layout_marginBottom="@dimen/mp_size_4"
-                    android:background="@drawable/home_bg_three"
-                    android:clickable="true"
-                    android:focusable="true"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:id="@+id/ivImg3"
-                        android:layout_width="34dp"
-                        android:layout_height="34dp"
-                        android:layout_alignParentRight="true"
-                        android:layout_marginTop="@dimen/mp_size_10"
-                        android:layout_marginRight="@dimen/mp_size_10"
-                        android:src="@drawable/sales" />
-
-                    <TextView
-                        android:id="@+id/tvSalesReturn"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@id/ivImg3"
-                        android:layout_margin="@dimen/mp_size_10"
-                        android:fontFamily="@font/quicksandbold"
-                        android:text="Sales \nReturn"
-                        android:textColor="@color/new_text_color"
-                        android:textSize="@dimen/text_size_16"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@id/tvSalesReturn"
-                        android:layout_marginLeft="@dimen/mp_size_10"
-                        android:layout_marginRight="@dimen/mp_size_10"
-                        android:layout_marginBottom="@dimen/mp_size_10"
-                        android:fontFamily="@font/quicksandbold"
-                        android:text="16"
-                        android:textColor="@color/new_text_color_lite1"
-
-                        android:textSize="@dimen/text_size_16"
-                        android:textStyle="bold" />
-
-
-                </RelativeLayout>
-
-                <RelativeLayout
-                    android:id="@+id/AllProductLayout"
-                    android:layout_width="140dp"
-                    android:layout_height="140dp"
-                    android:layout_below="@id/salesLayout"
-                    android:layout_marginLeft="@dimen/mp_size_16"
-                    android:layout_marginTop="@dimen/mp_size_20"
-                    android:layout_marginRight="@dimen/mp_size_16"
-                    android:layout_marginBottom="@dimen/mp_size_4"
-                    android:layout_toRightOf="@id/SalesReturnLayout"
-                    android:background="@drawable/home_bg_four"
-                    android:clickable="true"
-                    android:focusable="true"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:id="@+id/ivImg4"
-                        android:layout_width="34dp"
-                        android:layout_height="34dp"
-                        android:layout_alignParentRight="true"
-                        android:layout_marginTop="@dimen/mp_size_10"
-                        android:layout_marginRight="@dimen/mp_size_10"
-                        android:src="@drawable/products" />
-
-                    <TextView
-                        android:id="@+id/tvAllProducts"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@id/ivImg4"
-                        android:layout_margin="@dimen/mp_size_10"
-                        android:fontFamily="@font/quicksandbold"
-                        android:text="All \nProducts"
-                        android:textColor="@color/new_text_color"
-                        android:textSize="@dimen/text_size_16"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@id/tvAllProducts"
-                        android:layout_marginLeft="@dimen/mp_size_10"
-                        android:layout_marginRight="@dimen/mp_size_10"
-                        android:layout_marginBottom="@dimen/mp_size_10"
-                        android:fontFamily="@font/quicksandbold"
-                        android:text="16"
-                        android:textColor="@color/new_text_color_lite1"
-
-                        android:textSize="@dimen/text_size_16"
-                        android:textStyle="bold" />
-
-
-                </RelativeLayout>
-
-
-                <RelativeLayout
                     android:id="@+id/SalesOrderLayout"
                     android:layout_width="140dp"
                     android:layout_height="140dp"
-                    android:layout_marginLeft="@dimen/mp_size_16"
-                    android:layout_marginTop="@dimen/mp_size_20"
-                    android:layout_marginRight="@dimen/mp_size_16"
-                    android:layout_marginBottom="@dimen/mp_size_4"
                     android:background="@drawable/home_bg_one"
                     android:clickable="true"
                     android:focusable="true"
@@ -622,16 +239,12 @@
                     android:id="@+id/CatalogueLayout"
                     android:layout_width="140dp"
                     android:layout_height="140dp"
-
-                    android:layout_marginLeft="@dimen/mp_size_16"
-                    android:layout_marginTop="@dimen/mp_size_20"
-                    android:layout_marginRight="@dimen/mp_size_16"
-                    android:layout_marginBottom="@dimen/mp_size_4"
                     android:layout_toRightOf="@id/SalesOrderLayout"
                     android:background="@drawable/home_bg_two"
                     android:clickable="true"
                     android:focusable="true"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    app:layout_constraintEnd_toEndOf="parent">
 
                     <ImageView
                         android:id="@+id/ivImg6"
@@ -674,188 +287,208 @@
 
                 </RelativeLayout>
 
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/cart7"
-                    android:layout_width="150dp"
-                    android:layout_height="120dp"
-                    android:layout_marginLeft="@dimen/normal_size"
-                    android:layout_marginTop="20dp"
-                    android:background="?selectableItemBackground"
+                <RelativeLayout
+                    android:layout_marginTop="@dimen/mp_size_20"
+                    app:layout_constraintTop_toBottomOf="@id/SalesOrderLayout"
+                    android:id="@+id/salesLayout"
+                    android:layout_width="140dp"
+                    android:layout_height="140dp"
+                    android:layout_below="@id/SalesOrderLayout"
+                    android:background="@drawable/home_bg_one"
                     android:clickable="true"
                     android:focusable="true"
-                    android:visibility="gone"
-                    app:cardCornerRadius="@dimen/normal_size">
-
-                    <LinearLayout
-                        android:id="@+id/visitedLayout"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:orientation="vertical"
-                        android:visibility="gone">
-
-                        <ImageView
-                            android:layout_width="@dimen/mp_size_70"
-                            android:layout_height="@dimen/mp_size_70"
-                            android:layout_gravity="center"
-                            android:src="@mipmap/img_visited" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="@dimen/normal_size"
-                            android:fontFamily="@font/quicksand_semibold"
-                            android:text="Visited"
-
-                            android:textColor="@color/black"
-                            android:textSize="@dimen/text_size_18" />
-                    </LinearLayout>
-
-                </androidx.cardview.widget.CardView>
-
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/cart8"
-                    android:layout_width="150dp"
-                    android:layout_height="120dp"
-                    android:layout_marginLeft="20dp"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginRight="25dp"
-                    android:background="?selectableItemBackground"
-                    android:clickable="true"
-                    android:focusable="true"
-                    android:visibility="gone"
-                    app:cardCornerRadius="@dimen/normal_size"
-                    app:layout_constraintRight_toRightOf="parent">
-
-                    <LinearLayout
-                        android:id="@+id/exchnageLayout"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:orientation="vertical">
-
-                        <ImageView
-                            android:layout_width="@dimen/mp_size_70"
-                            android:layout_height="@dimen/mp_size_70"
-
-                            android:src="@drawable/icc_exchange" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="@dimen/normal_size"
-                            android:fontFamily="@font/quicksand_semibold"
-                            android:text="Exchange"
-                            android:textColor="@color/black"
-                            android:textSize="@dimen/text_size_18" />
-                    </LinearLayout>
-
-                </androidx.cardview.widget.CardView>
-
-
-                <LinearLayout
-                    android:id="@+id/MasterLayout"
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:layout_gravity="center"
-                    android:layout_marginLeft="@dimen/mp_size_16"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginRight="@dimen/mp_size_16"
-                    android:background="@drawable/home_bg_five"
-                    android:clickable="true"
-                    android:focusable="true"
-                    android:gravity="center"
-                    android:orientation="vertical"
-                    android:visibility="gone">
+                    android:orientation="vertical">
 
                     <ImageView
-                        android:layout_width="@dimen/mp_size_40"
-                        android:layout_height="@dimen/mp_size_40"
-                        android:layout_gravity="center"
+                        android:id="@+id/ivImg1"
+                        android:layout_width="34dp"
+                        android:layout_height="34dp"
+                        android:layout_alignParentRight="true"
                         android:layout_marginTop="@dimen/mp_size_10"
-                        android:layout_marginBottom="@dimen/mp_size_4"
-                        android:src="@drawable/i_master" />
+                        android:layout_marginRight="@dimen/mp_size_10"
+                        android:src="@drawable/reciept" />
+
+                    <TextView
+                        android:id="@+id/tvReceipt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/ivImg1"
+                        android:layout_margin="@dimen/mp_size_10"
+                        android:fontFamily="@font/quicksandbold"
+                        android:text="Total \nReceipts"
+                        android:textColor="@color/new_text_color"
+                        android:textSize="@dimen/text_size_16"
+                        android:textStyle="bold" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_marginTop="@dimen/mp_size_10"
+                        android:layout_below="@id/tvReceipt"
+                        android:layout_marginLeft="@dimen/mp_size_10"
+                        android:layout_marginRight="@dimen/mp_size_10"
                         android:layout_marginBottom="@dimen/mp_size_10"
                         android:fontFamily="@font/quicksandbold"
-                        android:text="Master"
-                        android:textColor="@color/white"
+                        android:text="25"
+                        android:textColor="@color/new_text_color_lite1"
                         android:textSize="@dimen/text_size_16"
                         android:textStyle="bold" />
-                </LinearLayout>
 
+                </RelativeLayout>
 
-                <LinearLayout
-                    android:id="@+id/PurchaseLayout"
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:layout_below="@+id/customerLayout"
-                    android:layout_gravity="center"
-                    android:layout_marginLeft="@dimen/mp_size_16"
+                <RelativeLayout
                     android:layout_marginTop="20dp"
-                    android:layout_marginRight="@dimen/mp_size_16"
-                    android:layout_toRightOf="@+id/MasterLayout"
-                    android:background="@drawable/sales_order_home_bg"
-
+                    android:id="@+id/deliveryLayout"
+                    android:layout_width="140dp"
+                    android:layout_height="140dp"
+                    android:background="@drawable/home_bg_two"
                     android:clickable="true"
                     android:focusable="true"
-                    android:gravity="center"
                     android:orientation="vertical"
-                    android:visibility="gone">
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/CatalogueLayout">
 
                     <ImageView
-                        android:layout_width="@dimen/mp_size_40"
-                        android:layout_height="@dimen/mp_size_40"
-                        android:layout_gravity="center"
+                        android:id="@+id/ivImg2"
+                        android:layout_width="34dp"
+                        android:layout_height="34dp"
+                        android:layout_alignParentRight="true"
                         android:layout_marginTop="@dimen/mp_size_10"
-                        android:layout_marginBottom="@dimen/mp_size_4"
-                        android:src="@drawable/i_purchase" />
+                        android:layout_marginRight="@dimen/mp_size_10"
+                        android:src="@drawable/delivery_order" />
+
+                    <TextView
+                        android:id="@+id/tvDelivery"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/ivImg2"
+                        android:layout_margin="@dimen/mp_size_10"
+                        android:fontFamily="@font/quicksandbold"
+                        android:text="Delivery \nOrder"
+                        android:textColor="@color/new_text_color"
+                        android:textSize="@dimen/text_size_16"
+                        android:textStyle="bold" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_marginTop="@dimen/mp_size_10"
+                        android:layout_below="@id/tvDelivery"
+                        android:layout_marginLeft="@dimen/mp_size_10"
+                        android:layout_marginRight="@dimen/mp_size_10"
                         android:layout_marginBottom="@dimen/mp_size_10"
                         android:fontFamily="@font/quicksandbold"
-                        android:text="Purchase"
-                        android:textColor="@color/white"
+                        android:text="15"
+                        android:textColor="@color/new_text_color_lite1"
                         android:textSize="@dimen/text_size_16"
                         android:textStyle="bold" />
-                </LinearLayout>
-            </RelativeLayout>
-        </RelativeLayout>
+
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_marginTop="@dimen/mp_size_20"
+                    android:id="@+id/SalesReturnLayout"
+                    android:layout_width="140dp"
+                    android:layout_height="140dp"
+                    app:layout_constraintTop_toBottomOf="@+id/salesLayout"
+                    android:background="@drawable/home_bg_three"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/ivImg3"
+                        android:layout_width="34dp"
+                        android:layout_height="34dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="@dimen/mp_size_10"
+                        android:layout_marginRight="@dimen/mp_size_10"
+                        android:src="@drawable/sales" />
+
+                    <TextView
+                        android:id="@+id/tvSalesReturn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/ivImg3"
+                        android:layout_margin="@dimen/mp_size_10"
+                        android:fontFamily="@font/quicksandbold"
+                        android:text="Sales \nReturn"
+                        android:textColor="@color/new_text_color"
+                        android:textSize="@dimen/text_size_16"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tvSalesReturn"
+                        android:layout_marginLeft="@dimen/mp_size_10"
+                        android:layout_marginRight="@dimen/mp_size_10"
+                        android:layout_marginBottom="@dimen/mp_size_10"
+                        android:fontFamily="@font/quicksandbold"
+                        android:text="16"
+                        android:textColor="@color/new_text_color_lite1"
+                        android:textSize="@dimen/text_size_16"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_marginTop="@dimen/mp_size_20"
+                    android:id="@+id/AllProductLayout"
+                    android:layout_width="140dp"
+                    android:layout_height="140dp"
+                    android:background="@drawable/home_bg_four"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:orientation="vertical"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintLeft_toRightOf="@+id/SalesReturnLayout"
+                    app:layout_constraintTop_toBottomOf="@+id/deliveryLayout">
+
+                    <ImageView
+                        android:id="@+id/ivImg4"
+                        android:layout_width="34dp"
+                        android:layout_height="34dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="@dimen/mp_size_10"
+                        android:layout_marginRight="@dimen/mp_size_10"
+                        android:src="@drawable/products" />
+
+                    <TextView
+                        android:id="@+id/tvAllProducts"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/ivImg4"
+                        android:layout_margin="@dimen/mp_size_10"
+                        android:fontFamily="@font/quicksandbold"
+                        android:text="All \nProducts"
+                        android:textColor="@color/new_text_color"
+                        android:textSize="@dimen/text_size_16"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tvAllProducts"
+                        android:layout_marginLeft="@dimen/mp_size_10"
+                        android:layout_marginRight="@dimen/mp_size_10"
+                        android:layout_marginBottom="@dimen/mp_size_10"
+                        android:fontFamily="@font/quicksandbold"
+                        android:text="16"
+                        android:textColor="@color/new_text_color_lite1"
+                        android:textSize="@dimen/text_size_16"
+                        android:textStyle="bold" />
+
+
+                </RelativeLayout>
+
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
-
-
-    <TextView
-        android:id="@+id/pri"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/text_large_size"
-        android:layout_marginTop="170dp"
-        android:text="Primary Information"
-        android:textColor="@color/black"
-        android:visibility="gone" />
-
-
-
-    <ProgressBar
-        android:id="@+id/progressBar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:indeterminate="true"
-        android:indeterminateTint="@color/colorPrimary"
-        android:indeterminateTintMode="src_atop"
-        android:visibility="gone" />
-
-    </RelativeLayout>
 
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/nav_view"
@@ -864,7 +497,4 @@
         android:layout_gravity="start"
         android:fitsSystemWindows="true"
         app:menu="@menu/navigation_menu" />
-
 </androidx.drawerlayout.widget.DrawerLayout>
-
-

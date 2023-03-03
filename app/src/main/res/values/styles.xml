@@ -69,11 +69,7 @@
     </style>
 
     <style name="Rounded" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
-<!--
-        <item name="android:layout_marginRight">@dimen/mp_size_12</item>
-        <item name="android:layout_marginLeft">@dimen/mp_size_12</item>
-        <item name="android:layout_marginTop">@dimen/mp_size_6</item>
-        <item name="android:layout_marginBottom">@dimen/mp_size_6</item>-->
+
         <item name="android:layout_margin">@dimen/mp_size_10</item>
         <item name="cornerSize">16dp</item>
         <item name="background">@drawable/bg_new_edit_bg</item>
